@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "24a837da-4a33-4227-b818-1d4723c442e9",
+		"name": "blogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31811130"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"kia\",\r\n    \"last_name\":\"sss\",\r\n    \"email\":\"k@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"dob\":\"1998-05-23\",\r\n    \"role\":\"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/user/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"k@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "blog store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1OTY4NzlkNmJkYWU1NGRmYjQ0NjNjMCIsImVtYWlsIjoic0BnbWFpbC5jb20ifSwiaWF0IjoxNzA0MzYzOTQ2fQ.kQ9-qCn8_AQGQEdJdqvTjMiMNky1AlxNCr0JebjfNo4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"hello\",\r\n    \"description\":\"world\",\r\n    \"publish_date\":\"2024-01-02\",\r\n    \"modify_date\":\"2024-01-02\",\r\n    \"category\":\"media\",\r\n    \"author\":\"gsd\",\r\n    \"status\":\"Publish\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/blog/store"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1OTY4NzlkNmJkYWU1NGRmYjQ0NjNjMCIsImVtYWlsIjoic0BnbWFpbC5jb20ifSwiaWF0IjoxNzA0MzYzOTQ2fQ.kQ9-qCn8_AQGQEdJdqvTjMiMNky1AlxNCr0JebjfNo4"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3000/api/blog/659688585d4868636ab02053"
+			},
+			"response": []
+		},
+		{
+			"name": "blog update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1OTY4NzlkNmJkYWU1NGRmYjQ0NjNjMCIsImVtYWlsIjoic0BnbWFpbC5jb20ifSwiaWF0IjoxNzA0MzYzOTQ2fQ.kQ9-qCn8_AQGQEdJdqvTjMiMNky1AlxNCr0JebjfNo4"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"hello\",\r\n    \"description\":\"world\",\r\n    \"publish_date\":\"2024-01-02\",\r\n    \"modify_date\":\"2024-01-02\",\r\n    \"category\":\"media\",\r\n    \"author\":\"jhj\",\r\n    \"status\":\"Publish\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/blog/65968967f73242cf6f64c12f"
+			},
+			"response": []
+		},
+		{
+			"name": "show blogs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1OTY4NzlkNmJkYWU1NGRmYjQ0NjNjMCIsImVtYWlsIjoic0BnbWFpbC5jb20ifSwiaWF0IjoxNzA0MzYzOTQ2fQ.kQ9-qCn8_AQGQEdJdqvTjMiMNky1AlxNCr0JebjfNo4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/api/blog/show"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/blog/65968223d8517ca5879f83e7",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY1OTY4NzlkNmJkYWU1NGRmYjQ0NjNjMCIsImVtYWlsIjoic0BnbWFpbC5jb20ifSwiaWF0IjoxNzA0MzYzOTQ2fQ.kQ9-qCn8_AQGQEdJdqvTjMiMNky1AlxNCr0JebjfNo4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/api/blog/65968223d8517ca5879f83e7"
+			},
+			"response": []
+		}
+	]
+}

@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use('/api',routes)
 app.use(passport.initialize())
-//app.use(errorHandle)
+app.use(errorHandle)
 app.listen(port,()=>{
     console.log(`Server is listening on port:${port}`);
 })
